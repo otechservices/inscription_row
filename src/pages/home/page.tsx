@@ -3,10 +3,19 @@ import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#f7f7f7' }}>
-      {/* Header */}
-      <div className="py-16 px-4" style={{ backgroundColor: '#1a6642' }}>
-        <div className="max-w-4xl mx-auto text-center">
+    <div className="min-h-screen" style={{ backgroundColor: '#f7f7f9' }}>
+      {/* Header with Background Image */}
+      <div 
+        className="py-16 px-4 relative bg-cover bg-center"
+        style={{ 
+          backgroundImage: 'url(https://static.readdy.ai/image/da6891ceab452ef6b6e6edf3741c1098/dc1b62a1a7e03ae3229690bfd91b0a29.png)',
+          minHeight: '600px'
+        }}
+      >
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/50"></div>
+        
+        <div className="max-w-4xl mx-auto text-center relative z-10">
           {/* Logo */}
           <div className="mb-6">
             <img 
@@ -15,8 +24,8 @@ export default function Home() {
               className="mx-auto w-24 h-24 object-contain"
             />
           </div>
-          <h1 className="text-5xl font-bold text-white mb-4">Plateforme d'Inscription à VEROWA</h1>
-          <p className="text-xl text-white/90 mb-8">Enregistrez-vous facilement et rapidement</p>
+          <h1 className="text-5xl font-bold text-white mb-4 drop-shadow-lg">Plateforme d'Inscription à VEROWA</h1>
+          <p className="text-xl text-white mb-8 drop-shadow-md">Enregistrez-vous facilement et rapidement</p>
           <Link 
             to="/inscription"
             className="inline-block px-8 py-4 rounded-lg font-bold text-white text-lg transition-all duration-300 hover:shadow-lg whitespace-nowrap cursor-pointer"
